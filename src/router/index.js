@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import login from '../components/login.vue'
+import firstpage from '../components/firstpage.vue'
+import headertop from '../components/headertop.vue'
+import floor from '../components/floor.vue'
+import firstpagetwo from '../views/firstpagetwo.vue'
+import header from '../components/header.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +15,36 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/firstpagetwo',
+    name: 'firstpagetwo',
+    component: firstpagetwo
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: login
+  },
+  {
+    path: '/header',
+    name: 'header',
+    component: header
+  },
+  {
+    path: '/floor',
+    name: 'floor',
+    component: floor
+  },
+  {
+    path: '/firstpage',
+    name: 'firstpage',
+    component: firstpage
+  },
+  {
+    path: '/headertop',
+    name: 'headertop',
+    component: headertop
   },
   {
     path: '/about',
@@ -21,7 +57,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })
