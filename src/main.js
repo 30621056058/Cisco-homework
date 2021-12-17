@@ -6,10 +6,12 @@ import store from './store'
 import { Button, Select ,row,col,Container ,Tag ,Image ,Form ,Input ,FormItem,
   Link,Carousel,MenuItemGroup,Menu,Submenu,
   CarouselItem ,Breadcrumb
-   ,breadcrumbItem,MenuItem,Radio,RadioGroup,RadioButton } from 'element-ui';
+   ,breadcrumbItem,MenuItem,Radio,RadioGroup,RadioButton ,card } from 'element-ui';
 
 import axios from 'axios'
 // import VueAxios from 'vue-axios'
+
+// import $ from 'jquery'
 
 Vue.prototype.$axios = axios;
 
@@ -35,12 +37,13 @@ Vue.component(Submenu .name, Submenu, );
 Vue.component(Radio .name, Radio, );
 Vue.component(RadioGroup .name, RadioGroup, );
 Vue.component(RadioButton .name, RadioButton, );
+Vue.component(card .name, card, );
 
 
 // Vue.component(fous)
 
 Vue.config.productionTip = false
-
+Vue.prototype.$ = window.$
 
 new Vue({
   router,

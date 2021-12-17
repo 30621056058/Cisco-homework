@@ -35,12 +35,12 @@
                 </g></svg></i></a
         ></el-col>
 
-        <el-col :span="6" class=" hidden-xs-only"
-          ><el-tag class="header-tag">标签一</el-tag>
-          <el-tag class="header-tag" type="success">标签二</el-tag>
-          <el-tag class="header-tag" type="info">标签三</el-tag>
-          <el-tag class="header-tag" type="warning">标签四</el-tag>
-          <el-tag class="header-tag" type="danger">标签五</el-tag></el-col
+        <el-col :md="10" :sm="10" class=" hidden-xs-only"
+          ><router-link to="firstpagetwo"><el-tag class="header-tag" >首页</el-tag></router-link> 
+          <router-link to="casea"> <el-tag class="header-tag" type="success">案例展示</el-tag></router-link>
+          <router-link to="newcenter"> <el-tag class="header-tag" type="info">新闻中心</el-tag></router-link>
+          <router-link to="contactus"> <el-tag class="header-tag" type="warning">联系我们</el-tag></router-link>
+         </el-col
         >
       </el-row>
 </template>

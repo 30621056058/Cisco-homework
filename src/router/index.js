@@ -6,13 +6,21 @@ import firstpage from '../components/firstpage.vue'
 import headertop from '../components/headertop.vue'
 import floor from '../components/floor.vue'
 import firstpagetwo from '../views/firstpagetwo.vue'
-import header from '../components/header.vue'
+import headera from '../components/headera.vue'
+import casea from '../views/casea.vue'
+import newcenter from '../views/newcenter.vue'
+import contactus from '../views/contactus.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
+    name: 'login',
+    component: login
+  },
+  {
+    path: '/Home',
     name: 'Home',
     component: Home
   },
@@ -22,19 +30,34 @@ const routes = [
     component: firstpagetwo
   },
   {
+    path: '/contactus',
+    name: 'contactus',
+    component: contactus
+  },
+  {
     path: '/login',
     name: 'login',
     component: login
   },
   {
-    path: '/header',
-    name: 'header',
-    component: header
+    path: '/casea',
+    name: 'casea',
+    component: casea
+  },
+  {
+    path: '/headera',
+    name: 'headera',
+    component: headera
   },
   {
     path: '/floor',
     name: 'floor',
     component: floor
+  },
+  {
+    path: '/newcenter',
+    name: 'newcenter',
+    component: newcenter
   },
   {
     path: '/firstpage',
@@ -57,7 +80,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })
